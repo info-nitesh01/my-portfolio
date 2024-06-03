@@ -56,7 +56,7 @@ function Projects() {
               isBlog={false}
               title="Job-Portal"
               description="Next JS Template with typeScript for Job search and upload. Added different login category using data from JSON Server, with user authentication and authorization."
-              ghLink="https://github.com/info-nitesh01/NYUS-Restaurant-Project"
+              ghLink="https://github.com/info-nitesh01/job-portal"
               demoLink="https://job-portal-example.netlify.app/"
             />
           </Col>
