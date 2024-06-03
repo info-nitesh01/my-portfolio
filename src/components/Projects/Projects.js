@@ -52,7 +52,7 @@ function Projects() {
           </Col>
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={nyus}
+              imgPath={jobportal}
               isBlog={false}
               title="Job-Portal"
               description="Next JS Template with typeScript for Job search and upload. Added different login category using data from JSON Server, with user authentication and authorization."
