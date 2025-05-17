@@ -2,6 +2,8 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import golobe from "../../Assets/Projects/golobe.png";
+import drbwc from "../../Assets/Projects/drbwc.png";
+import zweler from "../../Assets/Projects/zweler.png";
 import nyus from "../../Assets/Projects/nyus.png";
 import jobportal from "../../Assets/Projects/job-portal.png";
 import sportieEbikes from "../../Assets/Projects/sportie-ebikes.png";
@@ -13,6 +15,34 @@ function Projects() {
       <Container>
         <h1 className="project-heading">
           My Recent <strong className="orange">Works </strong>
+        </h1>
+        <p style={{ color: "#090724 " }}>
+          Here are a few projects I've worked on recently.
+        </p>
+        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={drbwc}
+              isBlog={false}
+              title="Drbwc"
+              description="Developed a responsive e-commerce platform with dynamic product listings, user auth, cart, wishlist, and admin-managed navigation using SCSS, Redux Toolkit, and lazy loading for better UX and performance."
+              ghLink="NA"
+              demoLink="https://drbwc.com/"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={zweler}
+              isBlog={false}
+              title="Zweler"
+              description="Managed and enhanced a scalable multivendor e-commerce platform with responsive UI, dynamic content, API optimization, and smooth frontend-backend integration to improve UX and admin efficiency."
+              ghLink="NA"
+              demoLink="https://zweler.com/"
+            />
+          </Col>
+        </Row>
+        <h1 className="project-heading">
+          My Practice <strong className="orange">Works </strong>
         </h1>
         <p style={{ color: "#090724 " }}>
           Here are a few projects I've worked on recently.
