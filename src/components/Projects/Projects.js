@@ -2,6 +2,7 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import golobe from "../../Assets/Projects/golobe.png";
+import bbcClone from "../../Assets/Projects/bbc-clone.png";
 import drbwc from "../../Assets/Projects/drbwc.png";
 import zweler from "../../Assets/Projects/zweler.png";
 import nyus from "../../Assets/Projects/nyus.png";
@@ -17,7 +18,7 @@ function Projects() {
           My Recent <strong className="orange">Works </strong>
         </h1>
         <p style={{ color: "#090724 " }}>
-          Here are a few projects I've worked on recently.
+          Here are a few live projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
@@ -42,12 +43,22 @@ function Projects() {
           </Col>
         </Row>
         <h1 className="project-heading">
-          My Practice <strong className="orange">Works </strong>
+          My Recent Practice <strong className="orange">Works </strong>
         </h1>
         <p style={{ color: "#090724 " }}>
-          Here are a few projects I've worked on recently.
+          Here are a few projects I've worked recently for Practice and Learning.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={bbcClone}
+              isBlog={false}
+              title="BBC Clone in Next JS"
+              description="A responsive BBC News clone built with Next.js, featuring dynamic content sections and modern UI components."
+              ghLink="https://github.com/info-nitesh01/bbc-clone"
+              demoLink="https://bbc-clone-by-nitesh.netlify.app/"
+            />
+          </Col>
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={golobe}
