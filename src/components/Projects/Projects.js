@@ -17,7 +17,7 @@ function Projects() {
         <h1 className="project-heading">
           My Recent <strong className="orange">Works </strong>
         </h1>
-        <p style={{ color: "#090724 " }}>
+        <p style={{ color: "var(--text-white)" }}>
           Here are a few live projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
@@ -45,7 +45,7 @@ function Projects() {
         <h1 className="project-heading">
           My Recent Practice <strong className="orange">Works </strong>
         </h1>
-        <p style={{ color: "#090724 " }}>
+        <p style={{ color: "var(--text-white)" }}>
           Here are a few projects I've worked recently for Practice and Learning.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
