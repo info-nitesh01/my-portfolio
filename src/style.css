@@ -1,4 +1,4 @@
-html {
+:root {
   --section-background-color: linear-gradient(to bottom left,
       rgba(17, 16, 16, 0.582),
       rgba(12, 8, 24, 0.904));
@@ -7,7 +7,32 @@ html {
       rgba(17, 16, 16, 0.678),
       rgba(12, 10, 22, 0.863));
 
-  --imp-text-color: #F2572C;
+  --imp-text-color: var(--primary-color);
+
+  --primary-color: #F2572C;
+  --primary-color-hover: #fb7c58;
+  --primary-color-faded: #fb7b58a8;
+  --primary-shadow: #ff866496;
+
+  --text-dark: #090724;
+  --text-white: #fff;
+  --text-light: rgb(250, 250, 250);
+  --text-muted: #e0947e;
+
+  --color-black: #000;
+  --navbar-mobile-bg: #181a27;
+  --resume-bg: #ffe2db;
+  --social-icon-bg: rgba(255, 255, 255, 0.972);
+  --scrollbar-track: var(--text-dark);
+
+  --navbar-shadow: rgba(9, 5, 29, 0.171);
+  --blog-shadow: rgba(145, 77, 161, 0.459);
+  --blog-shadow-hover: rgba(155, 88, 173, 0.65);
+
+  --purple-accent: #8a49a8;
+  --purple-accent-light: #5234795d;
+  --like-btn-bg: #934cce5e;
+  --like-btn-hover: #a24dd386;
 }
 
 .orange {
@@ -28,7 +53,7 @@ button:focus {
   width: 100%;
   height: 100%;
   z-index: 999999;
-  background-color: #F2572C;
+  background-color: var(--primary-color);
   background-image: url(./Assets/pre.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -53,18 +78,18 @@ button:focus {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #090724;
+  background: var(--scrollbar-track);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #fb7b58a8;
+  background: var(--primary-color-faded);
   border-radius: 12px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #fb7c58;
+  background: var(--primary-color-hover);
   border-radius: 12px;
 }
 
@@ -72,9 +97,9 @@ button:focus {
 /* Navbar Section  */
 /* --------- */
 .sticky {
-  background-color: #000 !important;
+  background-color: var(--color-black) !important;
   transition: all 0.3s ease-out 0s !important;
-  box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important;
+  box-shadow: 0px 10px 10px 0px var(--navbar-shadow) !important;
   backdrop-filter: blur(15px) !important;
 }
 
@@ -82,7 +107,7 @@ button:focus {
   position: fixed !important;
   transition: all 0.3s ease-out 0s !important;
   padding: 0.3rem 2rem !important;
-  font-size: 1.2rem !important;
+  font-size: 1rem !important;
 }
 
 .navbar-toggler {
@@ -93,7 +118,7 @@ button:focus {
 
 .navbar-toggler span {
   display: block !important;
-  background-color: #F2572C !important;
+  background-color: var(--primary-color) !important;
   height: 4px !important;
   width: 27px !important;
   margin-top: 5px !important;
@@ -140,7 +165,7 @@ button:focus {
   .navbar {
     padding: 1rem 2rem !important;
     font-size: 1.4rem !important;
-    background-color: #181a27 !important;
+    background-color: var(--navbar-mobile-bg) !important;
   }
 
   .navbar-nav .nav-item a::after {
@@ -149,7 +174,7 @@ button:focus {
 }
 
 .navbar-brand {
-  color: rgb(250, 250, 250) !important;
+  color: var(--text-light) !important;
 }
 
 .logo {
@@ -158,7 +183,7 @@ button:focus {
 }
 
 .navbar-nav .nav-link {
-  color: #F2572C !important;
+  color: var(--primary-color) !important;
   padding-right: 1rem !important;
   padding-left: 1rem !important;
 }
@@ -189,10 +214,10 @@ button:focus {
   content: "";
   position: relative;
   display: block;
-  height: 5px;
+  height: 2px;
   width: 0;
   border-radius: 16px;
-  background: #F2572C;
+  background: var(--primary-color);
   bottom: 1px;
   left: 0;
   z-index: -1;
@@ -251,12 +276,14 @@ button:focus {
 }
 
 .home-header {
-  padding-top: 80px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
 }
 
 .home-content {
-  padding: 9rem 0 2rem !important;
-  color: #090724;
+  padding: 6rem 0 2rem !important;
+  color: var(--text-dark);
   text-align: left;
 }
 
@@ -267,23 +294,29 @@ button:focus {
 
 .heading-name {
   font-size: 70px !important;
-  font-weight: 700 !important;
+  font-weight: 600 !important;
   padding-left: 45px !important;
 }
 
+.banner-image{
+    max-width: none !important;
+    height: auto;
+    width: 759px;
+}
+
 .main-name {
-  color: #F2572C;
+  color: var(--primary-color);
 }
 
 .Typewriter__wrapper {
   font-size: 2.2em !important;
-  color: #F2572C !important;
+  color: var(--primary-color) !important;
   font-weight: 600 !important;
 }
 
 .Typewriter__cursor {
   font-size: 2.4em !important;
-  color: #F2572C !important;
+  color: var(--primary-color) !important;
 }
 
 @media (max-width: 767px) {
@@ -317,7 +350,7 @@ button:focus {
 }
 
 .home-about-description {
-  color: #090724 !important;
+  color: var(--text-dark) !important;
   padding-top: 100px !important;
   padding-bottom: 20px !important;
   text-align: center;
@@ -332,7 +365,7 @@ button:focus {
 .home-about-social {
   text-align: center !important;
   padding-top: 25px;
-  color: #090724 !important;
+  color: var(--text-dark) !important;
 }
 
 .home-about-social-links {
@@ -351,7 +384,7 @@ button:focus {
   text-align: center !important;
   font-size: 1.2em !important;
   line-height: 2em !important;
-  background: rgba(255, 255, 255, 0.972) !important;
+  background: var(--social-icon-bg) !important;
   border-radius: 50% !important;
   transition: 0.5s !important;
 }
@@ -364,7 +397,7 @@ button:focus {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: #F2572C;
+  background: var(--primary-color);
   transition: 0.5s;
   transform: scale(0.9);
   z-index: -1;
@@ -372,13 +405,13 @@ button:focus {
 
 .home-social-icons:hover::before {
   transform: scale(1.1);
-  box-shadow: 0 0 15px #F2572C;
+  box-shadow: 0 0 15px var(--primary-color);
 }
 
 .home-social-icons:hover {
-  color: #F2572C;
-  box-shadow: 0 0 5px #F2572C;
-  text-shadow: 0 0 2px #F2572C;
+  color: var(--primary-color);
+  box-shadow: 0 0 5px var(--primary-color);
+  text-shadow: 0 0 2px var(--primary-color);
 }
 
 .social-icons {
@@ -388,14 +421,14 @@ button:focus {
 }
 
 .icon-colour {
-  color: #F2572C !important;
+  color: var(--primary-color) !important;
 }
 
 /* --------- */
 /* Footer */
 /* --------- */
 .footer {
-  background-color: #000 !important;
+  background-color: var(--color-black) !important;
   bottom: 0 !important;
   padding-top: 10px !important;
   padding-bottom: 8px !important;
@@ -422,7 +455,7 @@ button:focus {
 
 .footer h3 {
   font-size: 1em;
-  color: #F2572C !important;
+  color: var(--primary-color) !important;
   margin-top: 0.5em !important;
   margin-bottom: 0.5em !important;
 }
@@ -434,7 +467,7 @@ button:focus {
 }
 
 .blockquote-footer {
-  color: #e0947e !important;
+  color: var(--text-muted) !important;
 }
 
 /* --------- */
@@ -463,8 +496,8 @@ button:focus {
 }
 
 .project-card-view {
-  box-shadow: 4px 5px 4px 3px #ff866496 !important;
-  color: #090724 !important;
+  box-shadow: 4px 5px 4px 3px var(--primary-shadow) !important;
+  color: var(--text-dark) !important;
   background-color: transparent !important;
   opacity: 0.9 !important;
   transition: all 0.5s ease 0s !important;
@@ -474,7 +507,7 @@ button:focus {
 .project-card-view:hover {
   transform: scale(1.02) !important;
   overflow: hidden !important;
-  box-shadow: 0 4px 4px 5px #ff866496 !important;
+  box-shadow: 0 4px 4px 5px var(--primary-shadow) !important;
 }
 
 .blog-card {
@@ -487,14 +520,14 @@ button:focus {
 
 .blog-card-view {
   background-color: transparent !important;
-  box-shadow: 0 3px 3px 2px rgba(145, 77, 161, 0.459) !important;
-  color: white !important;
+  box-shadow: 0 3px 3px 2px var(--blog-shadow) !important;
+  color: var(--text-white) !important;
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
 }
 
 .blog-link {
-  color: white !important;
+  color: var(--text-white) !important;
   text-decoration: none !important;
 }
 
@@ -505,7 +538,7 @@ button:focus {
 .blog-card-view:hover {
   transform: scale(1.02) !important;
   overflow: hidden !important;
-  box-shadow: 0 3px 3px 5px rgba(155, 88, 173, 0.65) !important;
+  box-shadow: 0 3px 3px 5px var(--blog-shadow-hover) !important;
 }
 
 .card-img-top {
@@ -520,15 +553,15 @@ button:focus {
 }
 
 .btn-primary {
-  color: #fff !important;
-  background-color: #F2572C !important;
-  border-color: #F2572C !important;
+  color: var(--text-white) !important;
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
 }
 
 .btn-primary:hover {
-  color: #fff !important;
-  background-color: #fb7c58 !important;
-  border-color: #fb7c58 !important;
+  color: var(--text-white) !important;
+  background-color: var(--primary-color-hover) !important;
+  border-color: var(--primary-color-hover) !important;
 }
 
 .btn:focus {
@@ -537,7 +570,7 @@ button:focus {
 }
 
 .project-heading {
-  color: #090724 !important;
+  color: var(--text-dark) !important;
   font-size: 2.3em !important;
   font-weight: 500 !important;
   padding-top: 10px !important;
@@ -551,7 +584,7 @@ button:focus {
   position: relative !important;
   padding-top: 150px !important;
   padding-bottom: 30px !important;
-  color: #090724 !important;
+  color: var(--text-dark) !important;
 }
 
 .tech-icons {
@@ -559,13 +592,13 @@ button:focus {
   margin: 15px !important;
   padding: 30px !important;
   opacity: 0.93 !important;
-  border: 1.7px solid #fb7b58a8 !important;
-  color: #F2572C;
+  border: 1.7px solid var(--primary-color-faded) !important;
+  color: var(--primary-color);
   border-radius: 5px !important;
   display: flex !important;
   justify-content: center;
   align-items: center;
-  box-shadow: 4px 5px 4px 3px #ff866496 !important;
+  box-shadow: 4px 5px 4px 3px var(--primary-shadow) !important;
   overflow: hidden !important;
   transition: all 0.4s ease 0s !important;
 }
@@ -579,7 +612,7 @@ button:focus {
 .tech-icons:hover {
   transform: scale(1.05) !important;
   overflow: hidden !important;
-  border: 2.2px solid #F2572C !important;
+  border: 2.2px solid var(--primary-color) !important;
 }
 
 .tech-icon-images {
@@ -589,7 +622,7 @@ button:focus {
 
 .quote-card-view {
   border: none !important;
-  color: #090724 !important;
+  color: var(--text-dark) !important;
   background-color: transparent !important;
 }
 
@@ -613,8 +646,8 @@ button:focus {
   position: relative !important;
   padding-top: 110px !important;
   padding-bottom: 30px !important;
-  background-color: #ffe2db !important;
-  color: white !important;
+  background-color: var(--resume-bg) !important;
+  color: var(--text-white) !important;
 }
 
 .resume {
@@ -653,14 +686,14 @@ button:focus {
 .resume .resume-item {
   padding: 0 0 10px 25px;
   margin-top: -2px;
-  border-left: 2px solid #8a49a8;
+  border-left: 2px solid var(--purple-accent);
   position: relative;
 }
 
 .resume .resume-item .resume-title {
   line-height: 18px;
   font-size: 0.9em;
-  background: #5234795d;
+  background: var(--purple-accent-light);
   padding: 8px 15px;
   display: inline-block;
   font-weight: 600;
@@ -689,8 +722,8 @@ button:focus {
   border-radius: 50px;
   left: -9px;
   top: 0;
-  background: #fff;
-  border: 2px solid #8a49a8;
+  background: var(--text-white);
+  border: 2px solid var(--purple-accent);
 }
 
 .like-item {
@@ -700,8 +733,8 @@ button:focus {
 }
 
 .like-btn {
-  background-color: #934cce5e !important;
-  border-color: #934cce5e !important;
+  background-color: var(--like-btn-bg) !important;
+  border-color: var(--like-btn-bg) !important;
   padding: 0.25rem 0.98rem !important;
   border-radius: 5px !important;
   line-height: 1.4 !important;
@@ -710,8 +743,8 @@ button:focus {
 
 .like-btn:hover {
   transform: translateY(-2px) !important;
-  background-color: #a24dd386 !important;
-  border-color: #a24dd386 !important;
+  background-color: var(--like-btn-hover) !important;
+  border-color: var(--like-btn-hover) !important;
 }
 
 .animate-like {
@@ -737,7 +770,7 @@ button:focus {
 
 .fork-btn-inner {
   line-height: 1.4em !important;
-  background-color: #F2572C !important;
+  background-color: var(--primary-color) !important;
   padding: 0.25rem 1.1rem !important;
   vertical-align: middle !important;
   text-align: center !important;
@@ -745,8 +778,8 @@ button:focus {
 
 .fork-btn-inner:hover {
   transform: translateY(-2px) !important;
-  background-color: #fb7c58 !important;
-  border-color: #fb7c58 !important;
+  background-color: var(--primary-color-hover) !important;
+  border-color: var(--primary-color-hover) !important;
 }
 
 .fork-btn-inner::after {
